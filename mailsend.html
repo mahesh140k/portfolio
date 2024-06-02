@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Mail</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="contact-form padd-15">
+            <div class="row">
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" placeholder="Name">
+                    </div>
+                </div>
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                        <input type="text" id="subject" class="form-control" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                        <textarea id="message" class="form-control" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <button type="button" onclick="sendEmail()" class="btn">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function sendEmail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "maheshkumarvns1@gmail.com",
+                Password: "71298BC6C64EB5645AA98D723BBFB08F3F89",
+                To: 'maheshkumar221107@gmail.com',
+                From: "maheshkumarvns1@gmail.com", 
+                ReplyTo: email, 
+                Subject: subject,
+                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message,
+            }).then(function (message) {
+                if (message === Body) {
+                    alert("Mail sent successfully");
+                } else {
+                    alert("Error: " + message);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
