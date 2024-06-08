@@ -47,15 +47,15 @@
 
             Email.send({
                 Host: "smtp.elasticemail.com",
-                Username: "maheshkumarvns1@gmail.com",
-                Password: "71298BC6C64EB5645AA98D723BBFB08F3F89",
-                To: 'maheshkumar221107@gmail.com',
-                From: "maheshkumarvns1@gmail.com", 
-                ReplyTo: email, 
+                Username: "maheshkumarvns1@gmail.com",  
+                Password: "71298BC6C64EB5645AA98D723BBFB08F3F89",            
+                To: 'maheshkumar221107@gmail.com',           
+                From: "maheshkumarvns1@gmail.com",     
+                ReplyTo: email,
                 Subject: subject,
                 Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message,
             }).then(function (message) {
-                if (message === Body) {
+                if (message === "OK") {
                     alert("Mail sent successfully");
                 } else {
                     alert("Error: " + message);
