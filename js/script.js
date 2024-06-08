@@ -1,7 +1,7 @@
 
 var typed = new Typed((".typing"),
 {
-    strings:["","seo expert", "wordpress developer", "digital marketing"],
+    strings:["","seo Executive",],
     typeSpeed:100,
     BackSpeed:60,
     loop:true
