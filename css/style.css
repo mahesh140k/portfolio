@@ -321,7 +321,7 @@ h3.my-profession{
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
     right: 50px;
-    bottom: 45px;
+    bottom: -19px;
 
 }
 .home-img::before{
