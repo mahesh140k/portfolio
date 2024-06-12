@@ -23,6 +23,7 @@
             class="alternate-style" title="color-4" disabled>
         <link rel="stylesheet" href="css/skins/color-5.css"
             class="alternate-style" title="color-5" disabled>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     </head>
     <body>
@@ -497,39 +498,66 @@
                         <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
                         <h4 class="contact-sub-title padd-15">I'M VERY RESPOSIVE
                             TO MESSAGE</h4>
-                        <div class="row">
-                            <div class="contact-form padd-15">
-                                <div class="row">
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name">
+                            <div class="row">
+                                <div class="contact-form padd-15">
+                                    <div class="row">
+                                        <div class="form-item col-6 padd-15">
+                                            <div class="form-group">
+                                                <input type="text" id="name" class="form-control" placeholder="Name" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email">
+                                        <div class="form-item col-6 padd-15">
+                                            <div class="form-group">
+                                                <input type="email" id="email" class="form-control" placeholder="Email" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Subject">
+                                        <div class="form-item col-12 padd-15">
+                                            <div class="form-group">
+                                                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <textarea name="text" id class="form-control" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <div class="form-item col-12 padd-15">
+                                            <div class="form-group">
+                                                <textarea name="text" id="message" class="form-control" cols="30" rows="10" placeholder="Message" required></textarea>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn">Send Message</button>
+                                        <div class="form-item col-6 padd-15">
+                                            <div class="form-group">
+                                                <button type="button" onclick="sendEmail()" class="btn">Send Message</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            
+                
                 </section>
+
+                <script type="text/javascript">
+                    function sendEmail() {
+                        var name = document.getElementById("name").value;
+                        var email = document.getElementById("email").value;
+                        var subject = document.getElementById("subject").value;
+                        var message = document.getElementById("message").value;
+            
+                        Email.send({
+                            Host: "smtp.elasticemail.com",
+                            Username: "maheshkumarvns1@gmail.com",  
+                            Password: "D02C65B3EB94F7894D681B3138EC74B62D4A",
+                            To: 'maheshkumarvns1@gmail.com',
+                            From: "maheshkumarvns1@gmail.com",
+                            ReplyTo: email,
+                            Subject: subject,
+                            Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message,
+                        }).then(function (message) {
+                            if (message === "OK") {
+                                alert("Mail sent successfully");
+                            } else {
+                                alert("Error: " + message);
+                            }
+                        });
+                    }
+                </script>
 
                 <!-- contact section start -->
 

@@ -4,7 +4,6 @@
     <title>Send Mail</title>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
-
 <body>
     <div class="row">
         <div class="contact-form padd-15">
@@ -46,11 +45,11 @@
             var message = document.getElementById("message").value;
 
             Email.send({
-                Host: "smtp.gmail.com",
-                Username: "ayanshoffice@gmail.com",  
-                Password: "datf xzku jnty hvnx",            
-                To: 'ayanshoffice@gmail.com',           
-                From: "ayanshoffice@gmail.com",     
+                Host: "smtp.elasticemail.com",
+                Username: "maheshkumarvns1@gmail.com",  
+                Password: "D02C65B3EB94F7894D681B3138EC74B62D4A",
+                To: 'maheshkumarvns1@gmail.com',
+                From: "maheshkumarvns1@gmail.com",
                 ReplyTo: email,
                 Subject: subject,
                 Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message,
