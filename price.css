@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.Optimization {
+	width: 100%;
+	min-height: 100vh;
+	background: #90EE90;
+}
+
+.Optimization .lock {
+	color: #000000;
+	font-size: 32px;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.price-row {
+	width: 95%;
+	max-width: 1160px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 25px;
+	padding-bottom: 2rem;
+}
+
+.price-col {
+	background: #006400;
+	padding: 10% 12%;
+	border-radius: 10px;
+	color: #fff;
+	text-align: center;
+}
+
+.price-col .pricedown {
+	font-size: 2rem;
+	font-weight: 600;
+	color: #fff;
+	line-height: 3rem;
+	margin-bottom: 0.75rem;
+}
+
+.price-col .priceup {
+	font-size: 44px;
+	margin: 20px 0 40px;
+	font-weight: 500;
+}
+
+.price-col .priceup span {
+	font-size: 16px;
+}
+
+.price-col .priceleft {
+	text-align: left;
+	color: #ddd;
+}
+
+.price-col .priceleft li {
+	margin: 15px 0;
+	size: 20px;
+}
+
+ul.priceleft {
+	padding-bottom: 10px;
+}
+
+ul.priceleft .normal_price {
+	list-style: none !important;
+	text-align: left;
+	font-size: 1.1rem;
+	line-height: 3.2rem;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	white-space: nowrap;
+	/* Prevent text from wrapping onto multiple lines */
+}
+
+.normal_spam {
+	width: 25px;
+	/* Adjust the width of the image */
+	height: auto;
+	/* Maintain aspect ratio */
+	margin-right: 10px;
+	/* Adjust the spacing between image and text */
+}
+
+.normalpricespan {
+	font-size: 1.1rem;
+	line-height: 2.2rem;
+	color: #fff;
+}
+
+.price-col button {
+	width: 100%;
+	padding: 14px 0;
+	background: transparent !important;
+	color: #fff;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	font-weight: 600;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+
+.price-col button:hover {
+	background: yellow !important;
+	color: #000;
+	font-size: 2.25rem !important;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+
+.nor {
+	width: 104px;
+	height: 30px;
+	background-color: #ffff00;
+	transform: rotate(90deg);
+	margin-left: -73px;
+	color: black;
+	padding: 5px;
+	
+}
+
+p.pricecolor {
+	font-size: 2rem;
+	font-weight: 600;
+	color: #ffff00;
+	line-height: 3rem;
+	margin-bottom: 0.75rem;
+}
+
+.normalpricespan1 {
+	margin-left: 4rem;
+	margin-top: -2rem;
+}
