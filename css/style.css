@@ -313,32 +313,16 @@ h3.my-profession{
     text-align: center;
     position: relative;
 }
-.home-img::after{
-    content: '';
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: 50px;
-    bottom: -19px;
-
-}
-.home-img::before{
-    content: '';
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: 50px;
-    top: -20px;
-
-}
 .home .home-img img{
-    height: 280px;
-    margin: auto;
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the entire element */
+    border: 3px solid #cccccc;
 
 }
 
