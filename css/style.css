@@ -842,3 +842,46 @@ a {
 .scroll {
     overflow: hidden !important;
 }
+
+
+
+/* General styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.padd-15 {
+    padding: 15px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .home-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .home-img {
+        margin-top: 5px;
+    }
+    
+}
