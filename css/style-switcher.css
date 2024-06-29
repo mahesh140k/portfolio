@@ -74,8 +74,8 @@ justify-content: space-between;
 .style-switcher .color-5{
     background: #f021b2;
 }
-@media screen {
+/* @media screen {
     .style-switcher{
         display: none;
     }
-}
+} */
