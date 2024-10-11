@@ -65,4 +65,27 @@ for(let i=0; i<totaleNavList; i++)
         }
     }
     
-    
+    // SCROLL BEHAVIOUR
+    const sections = document.querySelectorAll('.scroll-section');
+    let currentIndex = 0;
+
+    // Function to scroll to the next section
+    function scrollToNextSection(event) {
+        // Prevent default scroll behavior
+        event.preventDefault();
+
+        // Check if scrolling down and not at the last section
+        if (event.deltaY > 0 && currentIndex < sections.length - 1) {
+            currentIndex++;
+        } 
+        // Check if scrolling up and not at the first section
+        else if (event.deltaY < 0 && currentIndex > 0) {
+            currentIndex--;
+        }
+
+        // Scroll to the next or previous section
+        sections[currentIndex].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Attach event listener for mousewheel scroll event
+    window.addEventListener('wheel', scrollToNextSection);

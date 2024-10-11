@@ -890,3 +890,7 @@ a {
     }
     
 }
+
+html {
+    scroll-behavior: smooth;
+}
